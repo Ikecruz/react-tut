@@ -1,12 +1,18 @@
-import './Cruz.css'
+// USESTATE
+import { useState } from 'react';
 
 const Cruz = () => {
 
-    let title = "My blog";
+    let [ name, setName] = useState("Cruz");
+
+    const changeName = (name) => {
+        setName(name)
+    }
 
     return(
         <div className="App">
-            <div>{ title }</div>
+            <div>{ name }</div>
+            <button onClick={() => changeName("Dave")}>change name</button>
         </div>
     );
 }
