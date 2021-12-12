@@ -1,12 +1,16 @@
+import BlogList from './blog';
 import './Cruz.css'
 
 const Cruz = () => {
 
-    let title = "My blog";
-
+    let blogs = [
+        {title: "How to write a book", main: "lorem ......"},
+        {title: "How to write a cook book", main: "lorem ......"}
+    ]
+    
     return(
         <div className="App">
-            <div>{ title }</div>
+            <BlogList blogs={ blogs } />
         </div>
     );
 }
