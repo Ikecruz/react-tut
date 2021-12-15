@@ -1,12 +1,17 @@
+import { useEffect , useState } from 'react';
 import './Cruz.css'
 
 const Cruz = () => {
+    let [name , setName ] = useState("Cruz");
 
-    let title = "My blog";
+    useEffect(() => {
+        console.log(`Rendered`);
+        setName("Dave")
+    }, [] /* Modifier */)
 
     return(
         <div className="App">
-            <div>{ title }</div>
+            <div>{ name }</div>
         </div>
     );
 }
